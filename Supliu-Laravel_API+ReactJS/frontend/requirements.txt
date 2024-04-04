@@ -1,0 +1,4 @@
+npx create-react-app frondend
+npm install axios
+npm install react-router-dom
+npm install react-bootstrap bootstrap

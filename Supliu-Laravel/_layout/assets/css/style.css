@@ -1,0 +1,66 @@
+body{
+	background-image: URL('../img/background.png');
+	background-size:cover;
+	background-position: top center;
+	background-attachment: fixed;
+	text-align: center;
+	margin: 0px;
+}
+.head{
+	position: flex;
+    margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px;
+	display: block;
+	width: 90%;
+	max-width: 1024px;
+	min-height: 100px;
+	height:auto;
+	background-color: white;
+	border-radius: 10px 10px 0 0;
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+.logo{
+	min-width: 200px;
+}
+.search{
+	padding-top:18px;
+}
+.body{
+	position: flex;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	display: block;
+	width: 90%;
+	max-width: 1024px;
+	min-height: inherit;
+	background-color: white;
+    opacity:0.85;
+	border-radius: 0 0 10px 10px;
+	margin-bottom: 50px;
+	text-align: left;
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+.body h5{
+	margin-top: 20px;
+}
+.table{
+	text-align: left;
+}
+.content{
+	position: flex;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 30%;
+	min-width: 250px;
+	height: 100px;
+	background-color: yellow;
+}
+.error_text{
+	color: #DC3545;
+}

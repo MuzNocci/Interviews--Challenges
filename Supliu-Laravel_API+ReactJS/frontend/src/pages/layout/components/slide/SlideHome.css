@@ -1,0 +1,9 @@
+.slider{
+    background-color: black;
+    background-image: url('./img/sertanejo_violao_500x320_11022017200925.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    margin-bottom:1em;
+}
