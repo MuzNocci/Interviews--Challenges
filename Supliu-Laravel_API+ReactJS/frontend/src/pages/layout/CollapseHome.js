@@ -45,7 +45,7 @@ function CollapseHome() {
                         <Accordion.Item eventKey={album.id}>
                             <Accordion.Header>Disco: {album.name}</Accordion.Header>
                             <Accordion.Body>
-                                <TableHome album={album.id} />
+                                <TableHome album={album.id} key={album.id} />
                             </Accordion.Body>
                         </Accordion.Item>
                     ))
