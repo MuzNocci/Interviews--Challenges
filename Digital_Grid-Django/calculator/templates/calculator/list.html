@@ -1,0 +1,52 @@
+{% extends 'calculator/_base.html' %}
+<!--
+TODO: You must display the data sent to the template in a table with the follow headers
+ - Nome, Documento, Consumo, Tipo, Cobertura, Desconto, Economia
+
+TODO: You must provide 2 selects to filter the rows based in:
+ 1) consumer type
+ 2) consumption range
+ - You must create the filter functionality in the front-end using JS
+-->
+
+{% block title %}Calculadora{% endblock %}
+
+{% block content %}
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Documento</th>
+            <th scope="col">Consumo</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Cobertura</th>
+            <th scope="col">Desconto</th>
+            <th scope="col">Economia</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% if consumers %}
+          {% for consumer in consumers %}
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+          </tr>
+          {% endfor %}
+        {% else %}
+          <tr>
+            <th scope="row" colspan="9">Nenhum consumidor encontrado.</th>
+          </tr>
+        {% endif %}
+        </tbody>
+      </table>
+{% endblock %}
+
+
