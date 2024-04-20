@@ -23,8 +23,7 @@ class DiscountRules(models.Model):
         ("A","> 20.000 kWh"),
     )
 
-
-    customer_type = models.CharField("Tipo do Consumidor", max_length=1, choices=TYPE_CHOICES)
+    consumer_type = models.CharField("Tipo do Consumidor", max_length=1, choices=TYPE_CHOICES)
     consumption_range = models.CharField("Faixa de Consumo", max_length=1, choices=RANGE_CHOICES)
     cover_value = models.CharField("Valor de Cobertura", max_length=1, choices=COVER_CHOICES)
     discount_value = models.DecimalField("Valor de Desconto", decimal_places=2, max_digits=10)
@@ -42,8 +41,10 @@ class Consumer(models.Model):
     consumption = models.IntegerField("Consumo(kWh)", blank=True, null=True)
     distributor_tax = models.FloatField("Tarifa da Distribuidora", blank=True, null=True)
     discount_rule = models.ForeignKey(DiscountRules, on_delete=models.CASCADE)
-    #  create the foreign key for discount rule model here
+    # create the foreign key for discount rule model here
 
+    def __str__(self):
+            return str(self.name)
 
 
 # TODO: Create the model DiscountRules below

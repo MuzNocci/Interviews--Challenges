@@ -1,6 +1,6 @@
 {% extends 'calculator/_base.html' %}
 <!--
-TODO: You must display the data sent to the template in a table with the follow headers
+TODO: You must display the consumer sent to the template in a table with the follow headers
  - Nome, Documento, Consumo, Tipo, Cobertura, Desconto, Economia
 
 TODO: You must provide 2 selects to filter the rows based in:
@@ -12,6 +12,7 @@ TODO: You must provide 2 selects to filter the rows based in:
 {% block title %}Calculadora{% endblock %}
 
 {% block content %}
+
     <table class="table">
         <thead>
           <tr>
@@ -29,15 +30,14 @@ TODO: You must provide 2 selects to filter the rows based in:
         {% if consumers %}
           {% for consumer in consumers %}
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>Mark</td>
-            <td>Otto</td>
+            <th scope="row">{{ consumer.id }}</th>
+            <td>{{ consumer.name }}</td>
+            <td>{{ consumer.document }}</td>
+            <td>{{ consumer.consumption }} kWh</td>
+            <td>{{ consumer.discount_rule.get_consumer_type_display }}</td>
+            <td>{{ consumer.discount_rule.get_cover_value_display }}</td>
+            <td>{{ consumer.discount_rule.discount_value }}</td>
+            <td>{{ consumer.discount_rule.discount_value }}</td>
           </tr>
           {% endfor %}
         {% else %}
@@ -47,6 +47,7 @@ TODO: You must provide 2 selects to filter the rows based in:
         {% endif %}
         </tbody>
       </table>
+
 {% endblock %}
 
 

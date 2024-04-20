@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from calculator.models import DiscountRules, Consumer
+from calculator.models import Consumer
 
 # TODO: Your list view should do the following tasks
 """
@@ -10,14 +10,13 @@ from calculator.models import DiscountRules, Consumer
 """
 
 
+
 def view1(request):
     
-    customers = Consumer.objects.all()
-    discounts = DiscountRules.objects.all()
+    consumers = Consumer.objects.all()
 
     context = {
-        'customers':customers,
-        'discounts':discounts,
+        'consumers': consumers,
     }
     return render(request, 'calculator/list.html', context)
 
